@@ -7,8 +7,8 @@
   <style>
     :root{
       --page-bg: #efefef;
-      --panel-green: #1ae02b; /* ярко-зелёный */
-      --header-blue: #1a18cf;  /* тёмно-синий */
+      --panel-green: #1ae02b;
+      --header-blue: #1a18cf;  
       --gap: 28px;
       --container-width: 1100px;
     }
@@ -29,7 +29,6 @@
       box-sizing: border-box;
     }
 
-    /* Стили общего вида блоков */
     .panel{
       background: var(--panel-green);
       border-radius: 2px;
@@ -49,8 +48,6 @@
       position: relative;
     }
 
-
-    /* Основная трёхколоночная секция */
     .three-col{
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
@@ -65,13 +62,11 @@
       min-height: 320px;
     }
 
-    /* Полоска под основным блоком */
     .fullwide{
       min-height: 62px;
       margin-bottom: var(--gap);
     }
 
-    /* Нижняя строка из трёх маленьких блоков */
     .bottom-row{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
