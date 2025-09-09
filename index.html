@@ -7,8 +7,8 @@
   <style>
     :root{
       --page-bg: #efefef;
-      --panel-green: #a81ae0;
-      --header-blue: #18cfb7;  
+      --panel: #a81ae0;
+      --header: #18cfb7;  
       --gap: 28px;
       --container-width: 900px;
     }
@@ -25,21 +25,15 @@
     .wrap{
       max-width: var(--container-width);
       margin: 36px auto;
-      padding: 0 18px;
-      box-sizing: border-box;
     }
 
     .panel{
-      background: var(--panel-green);
-      border-radius: 1px;
-      box-shadow:
-        0 0 0 8px #fffdfd,  
-        0 3px 6px #fffdfd(255, 254, 254, 0.06);
+      background: var(--panel);;
       min-height: 50px;
     }
 
     .header{
-      background: var(--header-blue);
+      background: var(--header);
       height: 78px;
       display:flex;
       align-items:center;
