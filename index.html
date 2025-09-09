@@ -34,7 +34,7 @@
       background: var(--panel-green);
       border-radius: 2px;
       box-shadow:
-        0 0 0 8px #e6e6e6,    /* внешний "бордюр" как на фото */
+        0 0 0 8px #e6e6e6,  
         0 3px 6px rgba(0,0,0,0.06);
       min-height: 60px;
     }
@@ -49,18 +49,6 @@
       position: relative;
     }
 
-    /* центрированный красный "текст" похожий на рукописный */
-    .header .title{
-      color: #ff2b2b;
-      font-size: 64px;
-      font-weight:700;
-      letter-spacing: 6px;
-      font-family: "Comic Sans MS", "Segoe Script", cursive;
-      text-transform: lowercase;
-      margin:0;
-      line-height:1;
-      user-select:none;
-    }
 
     /* Основная трёхколоночная секция */
     .three-col{
@@ -94,18 +82,6 @@
       min-height: 76px;
     }
 
-    /* Адаптация для маленьких экранов */
-    @media (max-width: 900px){
-      .three-col{
-        grid-template-columns: 1fr;
-      }
-      .bottom-row{
-        grid-template-columns: 1fr;
-      }
-      .header .title{
-        font-size: 48px;
-      }
-    }
   </style>
 </head>
 <body>
