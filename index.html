@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Макет — синий заголовок и зелёные панели</title>
+  <title>Макет</title>
   <style>
     :root{
       --page-bg: #efefef;
       --panel-green: #a81ae0;
       --header-blue: #18cfb7;  
       --gap: 28px;
-      --container-width: 1100px;
+      --container-width: 900px;
     }
 
     html,body{
@@ -35,7 +35,7 @@
       box-shadow:
         0 0 0 8px #fffdfd,  
         0 3px 6px #fffdfd(255, 254, 254, 0.06);
-      min-height: 60px;
+      min-height: 50px;
     }
 
     .header{
@@ -63,7 +63,7 @@
     }
 
     .fullwide{
-      min-height: 62px;
+      min-height: 50px;
       margin-bottom: var(--gap);
     }
 
@@ -72,9 +72,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: var(--gap);
       margin-bottom: 40px;
-    }
-    .bottom-row .panel{
-      min-height: 76px;
     }
 
   </style>
