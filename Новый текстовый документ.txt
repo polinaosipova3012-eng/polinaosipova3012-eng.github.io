@@ -1,0 +1,158 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Column(
+          children: [
+            //веохняя часть
+            Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 40,
+                    height: 40,
+                    color: Color.fromARGB(255, 200, 200, 0),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 40,
+                    color: Color.fromARGB(255, 200, 200, 0),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start, // Явно указываем выравнивание по левому краю
+                    children: <Widget>[
+                      Text(
+                        'Total balance to spend',
+                        style: TextStyle(
+                          fontSize: 20.0, // Можно оставить стандартным или изменить
+                        ),
+                      ),
+                      Text(
+                        '\$5000.55',
+                        style: TextStyle(
+                          fontSize: 48.0, // Увеличиваем шрифт в 2 раза (или по желанию)
+                          fontWeight: FontWeight.bold, // Опционально: жирный шрифт для акцента
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            //валюты
+            Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(
+                    'Planning Ahead',
+                    style: TextStyle(
+                      fontSize: 48.0, // Увеличиваем шрифт в 2 раза (или по желанию)
+                      fontWeight: FontWeight.bold, // Опционально: жирный шрифт для акцента
+                    ),
+                  ),
+                  Text(
+                    '-\$234.55',
+                      style: TextStyle(
+                        fontSize: 20.0, // Можно оставить стандартным или изменить
+                      ),
+                  ),
+                ],
+              ),
+            ),
+
+            BalanceItem(
+              iconColor: Color.fromARGB(255, 30, 220, 0),
+              amount:"-150.52",
+              timeText: "In 2 days"
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class BalanceItem extends StatelessWidget {
+  final Color iconColor;
+  final String amount; // Например: "-150.52"
+  final String timeText; // Например: "In 2 days"
+
+  const BalanceItem({
+    super.key,
+    required this.iconColor,
+    required this.amount,
+    required this.timeText,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Color.fromARGB(255, 40, 100, 0),
+            width: 3.0
+        )
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: iconColor,
+              ),
+              child: Center(
+                child: Icon(
+                  Icons.arrow_upward, // Можно заменить на нужную иконку или использовать Image
+                  color: Colors.white,
+                  size: 20,
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              amount,
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              timeText,
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.grey[600],
+              ),
+            ),
+          ],
+        ),
+    );
+  }
+}
